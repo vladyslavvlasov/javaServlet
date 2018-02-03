@@ -1,0 +1,84 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.slava.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ShowRequestHeaders</servlet-name>
+    <servlet-class>com.slava.ShowRequestHeaders</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LargeServletPage</servlet-name>
+    <servlet-class>com.slava.LargeServletPage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AutoPageRefresh</servlet-name>
+    <servlet-class>com.slava.AutoPageRefresh</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Redirect</servlet-name>
+    <servlet-class>com.slava.Redirect</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AuthError</servlet-name>
+    <servlet-class>com.slava.AuthError</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthError</servlet-name>
+    <url-pattern>/AuthError</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SecuredServlet</servlet-name>
+    <servlet-class>com.slava.SecuredServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecuredServlet</servlet-name>
+    <url-pattern>/SecuredServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/reg</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ShowRequestHeaders</servlet-name>
+    <url-pattern>/showHeaders</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>LargeServletPage</servlet-name>
+    <url-pattern>/large</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AutoPageRefresh</servlet-name>
+    <url-pattern>/AutoPageRefresh</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Redirect</servlet-name>
+    <url-pattern>/Redirect</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>AuthenticationFilter</filter-name>
+    <filter-class>com.slava.AuthenticationFilter</filter-class>
+
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthenticationFilter</filter-name>
+    <url-pattern>/SecuredServlet</url-pattern>
+  </filter-mapping>
+
+</web-app>

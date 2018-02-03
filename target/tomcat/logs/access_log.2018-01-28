@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [28/Jan/2018:15:39:06 +0200] "POST /slavaWeb/SecuredServlet HTTP/1.1" 200 42 http-bio-8080-exec-1 36
+0:0:0:0:0:0:0:1 - - [28/Jan/2018:15:39:15 +0200] "POST /slavaWeb/SecuredServlet HTTP/1.1" 200 41 http-bio-8080-exec-3 6
